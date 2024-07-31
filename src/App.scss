@@ -1,3 +1,24 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600; /* Semi Bold weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400; /* Regular weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
+    font-weight: 200; /* Extra Light weight */
+    font-style: normal;
+}
+
 $primary-red: hsl(0, 78%, 62%);
 $primary-cyan: hsl(180, 62%, 55%);
 $primary-orange: hsl(34, 97%, 64%);
@@ -22,24 +43,50 @@ $font-size: 15px;
 }
 
 .app {
-    width: 20rem;
+    width: 21.5rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 
-    .app_header {
+    .header_title {
+        font-size: 1.74rem;
+        font-family: $font-family;
+        font-weight: $font-weight-200;
+        color: $neutral-very-dark-blue;
+        margin: 0;
+        text-align: center;
+    }
 
+    .header_support {
+        font-size: 1.74rem;
+        font-family: $font-family;
+        font-weight: $font-weight-600;
+        color: $neutral-very-dark-blue;
+        margin: 0;
+        text-align: center;
+        padding: 0 0.2rem 1rem 0.2rem;
+    }
+
+    .header_description {
+        font-size: 1.08rem;
+        font-family: $font-family;
+        font-weight: $font-weight-400;
+        color: $neutral-grayish-blue;
+        margin: 0;
+        text-align: center;
+        padding: 0 0.2rem 3rem 0.2rem;
     }
 
     .topic_box {
 
-
         .sub_topic {
             border-radius: 5px;
-            padding: 1.5rem 2rem;
-            margin: 1.2rem 0;
+            padding: 1.5rem 1.8rem;
+            margin: 1.6rem 0;
             background-color: $neutral-very-light-gray;
             box-shadow: 0 1rem 2rem .2rem $shadow;
             display: grid;
             grid-template-rows: 0.5fr 0.9fr 1fr;
-            grid-template-columns: 3fr 1fr;
+            grid-template-columns: 3.5fr 1fr;
         }
 
         .topic_name {
@@ -72,19 +119,19 @@ $font-size: 15px;
         }
 
         .sub_topic-0 {
-            border-top: 3px solid $primary-cyan;
+            border-top: 4px solid $primary-cyan;
         }
 
         .sub_topic-1 {
-            border-top: 3px solid $primary-red;
+            border-top: 4px solid $primary-red;
         }
 
         .sub_topic-2 {
-            border-top: 3px solid $primary-orange;
+            border-top: 4px solid $primary-orange;
         }
 
         .sub_topic-3 {
-            border-top: 3px solid $primary-blue;
+            border-top: 4px solid $primary-blue;
         }
 
     }
