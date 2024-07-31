@@ -5,6 +5,7 @@ $primary-blue: hsl(212, 86%, 64%);
 $neutral-very-dark-blue: hsl(234, 12%, 34%);
 $neutral-grayish-blue: hsl(229, 6%, 66%);
 $neutral-very-light-gray: hsl(0, 0%, 98%);
+$shadow: hsl(226, 16%, 84%);
 
 $font-family: 'Poppins', sans-serif;
 $font-weight-200: 200;
@@ -13,7 +14,64 @@ $font-weight-600: 600;
 $font-size: 15px;
 
 #root {
-    background-color: hsl(0, 0%, 98%);
-    height: auto;
+    background-color: $neutral-very-light-gray;
+    height: 100vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.app {
+    width: 20rem;
+
+    .app_header {
+
+    }
+
+    .topic_box {
+
+
+        .sub_topic {
+            border-radius: 5px;
+            padding: 1.5rem 2rem;
+            margin: 1.2rem 0;
+            background-color: $neutral-very-light-gray;
+            box-shadow: 0 1rem 2rem .2rem $shadow;
+        }
+
+        .topic_name {
+            font-size: 1.3rem;
+            font-family: $font-family;
+            font-weight: $font-weight-600;
+            color: $neutral-very-dark-blue;
+        }
+
+        .sub_topic p {
+            font-size: $font-size;
+            font-family: $font-family;
+            font-weight: $font-weight-400;
+            color: $neutral-grayish-blue;
+        }
+
+        .sub_topic img {
+            width: 20%;
+        }
+
+        .sub_topic-0 {
+            border-top: 3px solid $primary-cyan;
+        }
+
+        .sub_topic-1 {
+            border-top: 3px solid $primary-red;
+        }
+
+        .sub_topic-2 {
+            border-top: 3px solid $primary-orange;
+        }
+
+        .sub_topic-3 {
+            border-top: 3px solid $primary-blue;
+        }
+
+    }
 }
