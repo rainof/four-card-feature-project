@@ -1,4 +1,5 @@
 import React from 'react';
+import className from 'classnames';
 import './App.scss';
 
 import supervisorIcon from './assets/images/icon-supervisor.svg';
@@ -25,9 +26,11 @@ function App({data}) {
       </header>
       <section className="topic_box">
         {topics.map((topic, index) => (
-          <div key={index} className={`sub_topic sub_topic-${index % image_files.length}`}>
-            <div className="topic_name">{topic.name}</div>
-            <p>{topic.description}</p>
+          <div key={index} className={className(`sub_topic sub_topic-${index % image_files.length}`)}>
+            <div className="topic_name merge_1_2">{topic.name}</div>
+            {/* <div></div> */}
+            <p className="topic_description merge_3_4">{topic.description}</p>
+            <div></div>
             <img
               src={image_files[index % image_files.length]}
               alt={`icon-${index + 1}`}

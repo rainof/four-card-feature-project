@@ -15,7 +15,7 @@ $font-size: 15px;
 
 #root {
     background-color: $neutral-very-light-gray;
-    height: 100vh;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,6 +37,9 @@ $font-size: 15px;
             margin: 1.2rem 0;
             background-color: $neutral-very-light-gray;
             box-shadow: 0 1rem 2rem .2rem $shadow;
+            display: grid;
+            grid-template-rows: 0.5fr 0.9fr 1fr;
+            grid-template-columns: 3fr 1fr;
         }
 
         .topic_name {
@@ -46,15 +49,26 @@ $font-size: 15px;
             color: $neutral-very-dark-blue;
         }
 
-        .sub_topic p {
+        .merge_1_2 {
+            grid-column: span 2;
+        }
+
+        .topic_description {
             font-size: $font-size;
             font-family: $font-family;
             font-weight: $font-weight-400;
             color: $neutral-grayish-blue;
+            line-height: 1.6rem;
+            margin: 0;
+        }
+
+        .merge_3_4 {
+            grid-column: span 2;
         }
 
         .sub_topic img {
-            width: 20%;
+            padding-top: 1rem;
+            width: 100%;
         }
 
         .sub_topic-0 {
