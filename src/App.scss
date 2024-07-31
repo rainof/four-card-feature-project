@@ -1,0 +1,19 @@
+$primary-red: hsl(0, 78%, 62%);
+$primary-cyan: hsl(180, 62%, 55%);
+$primary-orange: hsl(34, 97%, 64%);
+$primary-blue: hsl(212, 86%, 64%);
+$neutral-very-dark-blue: hsl(234, 12%, 34%);
+$neutral-grayish-blue: hsl(229, 6%, 66%);
+$neutral-very-light-gray: hsl(0, 0%, 98%);
+
+$font-family: 'Poppins', sans-serif;
+$font-weight-200: 200;
+$font-weight-400: 400;
+$font-weight-600: 600;
+$font-size: 15px;
+
+#root {
+    background-color: hsl(0, 0%, 98%);
+    height: auto;
+    display: flex;
+}
