@@ -1,21 +1,21 @@
 @font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins-SemiBold.ttf') format('truetype');
-    font-weight: 600; /* Semi Bold weight */
+    font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins-Regular.ttf') format('truetype');
-    font-weight: 400; /* Regular weight */
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
     src: url('./assets/fonts/Poppins-ExtraLight.ttf') format('truetype');
-    font-weight: 200; /* Extra Light weight */
+    font-weight: 200;
     font-style: normal;
 }
 
@@ -73,7 +73,7 @@ $font-size: 15px;
         color: $neutral-grayish-blue;
         margin: 0;
         text-align: center;
-        padding: 0 0.2rem 3rem 0.2rem;
+        padding-bottom: 0 0.2rem 3rem 0.2rem;
     }
 
     .topic_box {
@@ -134,5 +134,81 @@ $font-size: 15px;
             border-top: 4px solid $primary-blue;
         }
 
+    }
+}
+
+@media (min-width: 500px) {
+    .app {
+        height: auto;
+        width: 100%;
+        padding: 4rem 12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: $font-size;
+
+        .app_header {
+            width: 45%;
+            padding-bottom: 5%;
+
+            .header_description {
+                padding-bottom: 0 0.2rem 3rem 0.2rem;
+                font-size: calc($font-size * (100vw / 100));
+            }
+        }
+
+        .topic_box {
+            width: 70vw;
+            margin: 0;
+
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1.8vw;
+            align-items: center;
+
+            .sub_topic {
+                border-radius: 5px;
+                margin: 0;
+                padding: 2vw;
+                background-color: $neutral-very-light-gray;
+                box-shadow: 0 0.5rem 1.5rem .2rem $shadow;
+                display: grid;
+                grid-template-rows: 0.5fr 1fr 0.5fr;
+                grid-template-columns: 3.5fr 1fr;
+                align-items: center;
+            }
+
+            .sub_topic img {
+                padding-top: 0;
+                width: 100%;
+            }
+
+            //    c1 c2 c3
+            // r1  v  x  v
+            // r2  A  x  A
+
+            .sub_topic-0 {
+                grid-column: 1 / 2; /* column 1 */
+                grid-row: 1 / span 2; /* spanning 2 rows */
+              }
+
+              .sub_topic-1 {
+                grid-column: 2 / 3; /* column 2 */
+                grid-row: 1 / 2; /* row 1 */
+              }
+
+              .sub_topic-2 {
+                grid-column: 2 / 3; /* column 2 */
+                grid-row: 2 / 3; /* row 2 */
+              }
+
+              .sub_topic-3 {
+                grid-column: 3 / 4; /* column 3 */
+                grid-row: 1 / span 2; /* spanning 2 rows */
+              }
+        }
     }
 }
